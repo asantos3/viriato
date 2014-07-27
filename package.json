@@ -1,10 +1,10 @@
 {
-  "name": "monokai",
+  "name": "viriato",
   "theme": "syntax",
-  "version": "0.7.0",
+  "version": "0.1.0",
   "private": true,
-  "description": "A monokai theme",
-  "repository": "https://github.com/kevinsawicki/monokai",
+  "description": "A variant of the Monokai syntax theme",
+  "repository": "https://github.com/asantos3/viriato",
   "license": "MIT",
   "engines": {
     "atom": ">0.39.0"
