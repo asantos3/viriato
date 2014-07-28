@@ -106,13 +106,26 @@
 
 .string {
   color: #E6DB74;
+
+  &.regexp {
+    color: #f6aa11;
+  }
+
+  .constant {
+    color: #66d9ef;
+  }
+
+  .variable {
+    color: #ffffff;
+  }
 }
 
 .constant.numeric {
   color: #AE81FF;
 }
 
-.constant.language {
+.constant.language,
+.meta.preprocessor {
   color: #AE81FF;
 }
 
@@ -132,6 +145,10 @@
 .storage.type {
   font-style: italic;
   color: #66D9EF;
+}
+
+.entity {
+  color: #a6e22e;
 }
 
 .entity.name.class {
@@ -180,6 +197,9 @@
   color: #66D9EF;
 }
 
+.support.other.variable {
+}
+
 .invalid {
   color: #F8F8F0;
   background-color: #F92672;
@@ -188,6 +208,35 @@
 .invalid.deprecated {
   color: #F8F8F0;
   background-color: #AE81FF;
+}
+
+.punctuation.definition.variable {
+  color: #ffffff;
+}
+
+// General markup
+.markup.heading {
+  color: #fd971f;
+}
+
+.markup.italic {
+  font-style: italic;
+  color: #e42e70;
+}
+
+.markup.bold {
+  font-weight: bold;
+  color: #f92672;
+}
+
+.markup.underline {
+  text-decoration: underline;
+  color: #a6e22e;
+}
+
+.markup.quote {
+  font-style: italic;
+  color: #66d9ef;
 }
 
 /* CSS-specific */
