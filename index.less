@@ -7,7 +7,7 @@
 
 .editor {
   background-color: @syntax-background-color;
-  color: #f8f8f2;
+  color: #F8F8F2;
 
   .invisible-character {
     color: @syntax-invisible-character-color;
@@ -23,7 +23,7 @@
 
   .gutter {
     background-color: @syntax-gutter-background-color;
-    color: #f8f8f2;
+    color: #F8F8F2;
 
     .cursor-line {
       background-color: @syntax-gutter-background-color-selected;
@@ -60,17 +60,6 @@
   }
 
   .gfm {
-    .markup {
-      &.heading {
-        color: #A6E22E;
-        font-weight: bold;
-      }
-
-      &.underline {
-        color: #E6DB74;
-        text-decoration: underline;
-      }
-    }
 
     .bold {
       font-weight: bold;
@@ -81,7 +70,7 @@
     }
 
     .raw {
-      color: #ec3533;
+      color: #EC3533;
     }
 
     .variable.list {
@@ -91,12 +80,21 @@
 
     .link .entity {
       text-decoration: underline;
-      color: #66d9ef;
+      color: #66D9EF;
     }
 
     .code .support {
-      color: #7c7865;
+      color: #7C7865;
     }
+
+    .support.quote {
+      color: #75715E;
+    }
+
+    .strike {
+      color: #F92672;
+    }
+
   }
 }
 
@@ -108,15 +106,15 @@
   color: #E6DB74;
 
   &.regexp {
-    color: #f6aa11;
+    color: #F6AA11;
   }
 
   .constant {
-    color: #66d9ef;
+    color: #66D9EF;
   }
 
   .variable {
-    color: #ffffff;
+    color: #FFFFFF;
   }
 }
 
@@ -211,41 +209,51 @@
 }
 
 .punctuation.definition.variable {
-  color: #ffffff;
+  color: #FFFFFF;
 }
 
 // General markup
-.markup.heading {
-  color: #fd971f;
+.markup {
+  &.heading {
+    color: #FD971F;
+  }
+
+  &.underline {
+    color: #E6DB74;
+    text-decoration: underline;
+  }
+  &.heading {
+    color: #FD971F;
+  }
+
+  &.italic {
+    font-style: italic;
+    color: #F92672;
+  }
+
+  &.bold {
+    font-weight: bold;
+    color: #F92672;
+  }
+
+  &.underline {
+    text-decoration: underline;
+    color: #A6E22E;
+  }
+
+  &.quote {
+    font-style: italic;
+    color: #66D9EF;
+  }
 }
 
-.markup.italic {
-  font-style: italic;
-  color: #e42e70;
-}
-
-.markup.bold {
-  font-weight: bold;
-  color: #f92672;
-}
-
-.markup.underline {
-  text-decoration: underline;
-  color: #a6e22e;
-}
-
-.markup.quote {
-  font-style: italic;
-  color: #66d9ef;
-}
-
-/* CSS-specific */
+// CSS-specific
 .css {
   .entity.other.attribute-name.id {
-    color: #f6aa11;
+    color: #F6AA11;
 
     .entity {
-      color: #f6aa11;
+      color: #F6AA11;
     }
   }
 }
@@ -258,18 +266,18 @@
 // Makefile
 .makefile {
   .variable {
-    color: #f92672;
+    color: #F92672;
   }
 
   .target {
     .variable {
-      color: #a6e22e;
+      color: #A6E22E;
     }
   }
 
   .prerequisites {
     .variable {
-      color: #66d9ef;
+      color: #66D9EF;
     }
   }
 }
