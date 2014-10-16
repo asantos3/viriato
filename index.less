@@ -7,7 +7,7 @@
 
 .editor {
   background-color: @syntax-background-color;
-  color: #F8F8F2;
+  color: @syntax-text-color;
 
   .invisible-character {
     color: @syntax-invisible-character-color;
@@ -23,7 +23,7 @@
 
   .gutter {
     background-color: @syntax-gutter-background-color;
-    color: #F8F8F2;
+    color: @syntax-text-color;
 
     .cursor-line {
       background-color: @syntax-gutter-background-color-selected;
@@ -70,47 +70,47 @@
     }
 
     .raw {
-      color: #EC3533;
+      color: @red-color;
     }
 
     .variable.list {
-      color: #F92672;
+      color: @pink-color;
       font-weight: bold;
     }
 
     .link .entity {
       text-decoration: underline;
-      color: #66D9EF;
+      color: @blue-color;
     }
 
     .code .support {
-      color: #7C7865;
+      color: @gray-color;
     }
 
-    .support.quote {
-      color: #75715E;
+    .support.quote, .comment.quote {
+      color: @blue-color;
     }
 
     .strike {
-      color: #F92672;
+      color: @pink-color;
     }
 
   }
 }
 
 .comment {
-  color: #75715E;
+  color: @gray-color;
 }
 
 .string {
-  color: #E6DB74;
+  color: @yellow-color;
 
   &.regexp {
-    color: #F6AA11;
+    color: @orange-color;
   }
 
   .constant {
-    color: #66D9EF;
+    color: @blue-color;
   }
 
   .variable {
@@ -119,45 +119,45 @@
 }
 
 .constant.numeric {
-  color: #AE81FF;
+  color: @purple-color;
 }
 
 .constant.language,
 .meta.preprocessor {
-  color: #AE81FF;
+  color: @purple-color;
 }
 
 .constant.character,
 .constant.other {
-  color: #AE81FF;
+  color: @purple-color;
 }
 
 .keyword {
-  color: #F92672;
+  color: @pink-color;
 }
 
 .storage {
-  color: #F92672;
+  color: @pink-color;
 }
 
 .storage.type {
   font-style: italic;
-  color: #66D9EF;
+  color: @blue-color;
 }
 
 .entity {
-  color: #a6e22e;
+  color: @green-color;
 }
 
 .entity.name.class {
   text-decoration: underline;
-  color: #A6E22E;
+  color: @green-color;
 }
 
 .entity.other.inherited-class {
   font-style: italic;
   text-decoration: underline;
-  color: #A6E22E;
+  color: @green-color;
 }
 
 // Prevent underlines from making their way into whitespace elements
@@ -167,38 +167,38 @@
 }
 
 .entity.name.function {
-  color: #A6E22E;
+  color: @green-color;
 }
 
 .entity.name.instance {
-  color: #66D9EF;
+  color: @blue-color;
 }
 
 .variable.parameter {
   font-style: italic;
-  color: #FD971F;
+  color: @orange-color;
 }
 
 .entity.name.tag {
-  color: #f92672;
+  color: @pink-color;
 }
 
 .entity.other.attribute-name {
-  color: #A6E22E;
+  color: @green-color;
 }
 
 .support.function {
-  color: #66D9EF;
+  color: @blue-color;
 }
 
 .support.constant {
-  color: #66D9EF;
+  color: @blue-color;
 }
 
 .support.type,
 .support.class {
   font-style: italic;
-  color: #66D9EF;
+  color: @blue-color;
 }
 
 .support.other.variable {
@@ -206,12 +206,12 @@
 
 .invalid {
   color: #F8F8F0;
-  background-color: #F92672;
+  background-color: @pink-color;
 }
 
 .invalid.deprecated {
   color: #F8F8F0;
-  background-color: #AE81FF;
+  background-color: @purple-color;
 }
 
 .punctuation.definition.variable {
@@ -221,69 +221,96 @@
 // General markup
 .markup {
   &.heading {
-    color: #FD971F;
+    color: @orange-color;
   }
 
   &.underline {
-    color: #E6DB74;
+    color: @yellow-color;
     text-decoration: underline;
   }
   &.heading {
-    color: #FD971F;
+    color: @orange-color;
   }
 
   &.italic {
     font-style: italic;
-    color: #F92672;
+    color: @pink-color;
   }
 
   &.bold {
     font-weight: bold;
-    color: #F92672;
+    color: @pink-color;
   }
 
   &.underline {
     text-decoration: underline;
-    color: #A6E22E;
+    color: @green-color;
   }
 
   &.quote {
     font-style: italic;
-    color: #66D9EF;
+    color: @blue-color;
   }
 }
 
-// CSS-specific
+//HTML
+.punctuation.definition.tag.html {
+  color: @pink-color;
+}
+
+//JavaScript
+.variable.js {
+    color: @blue-color;
+}
+
+// CSS
 .css {
   .entity.other.attribute-name.id {
-    color: #F6AA11;
+    color: @orange-color;
 
     .entity {
-      color: #F6AA11;
+      color: @orange-color;
     }
   }
+}
+.variable {
+  color: @pink-color;
+}
+
+// Sass and scss
+.variable.sass, .variable.scss {
+  color: @pink-color;
+}
+
+.sass > .entity.css, .entity.sass {
+  color: @pink-color;
+}
+
+// Less
+.variable.less {
+  color: @pink-color;
 }
 
 // Jade syntax
 .class.jade {
-  color: #AE81FF;
+  color: @purple-color;
 }
 
 // Makefile
 .makefile {
   .variable {
-    color: #F92672;
+    color: @pink-color;
   }
 
   .target {
     .variable {
-      color: #A6E22E;
+      color: @green-color;
     }
   }
 
   .prerequisites {
     .variable {
-      color: #66D9EF;
+      color: @blue-color;
     }
   }
 }
