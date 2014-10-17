@@ -74,7 +74,7 @@
     }
 
     .variable.list {
-      color: @pink-color;
+      color: @icon-red-color;
       font-weight: bold;
     }
 
@@ -92,7 +92,7 @@
     }
 
     .strike {
-      color: @pink-color;
+      color: @icon-red-color;
     }
 
   }
@@ -133,11 +133,11 @@
 }
 
 .keyword {
-  color: @pink-color;
+  color: @icon-red-color;
 }
 
 .storage {
-  color: @pink-color;
+  color: @icon-red-color;
 }
 
 .storage.type {
@@ -180,7 +180,7 @@
 }
 
 .entity.name.tag {
-  color: @pink-color;
+  color: @icon-red-color;
 }
 
 .entity.other.attribute-name {
@@ -206,7 +206,7 @@
 
 .invalid {
   color: #F8F8F0;
-  background-color: @pink-color;
+  background-color: @icon-red-color;
 }
 
 .invalid.deprecated {
@@ -234,12 +234,12 @@
 
   &.italic {
     font-style: italic;
-    color: @pink-color;
+    color: @icon-red-color;
   }
 
   &.bold {
     font-weight: bold;
-    color: @pink-color;
+    color: @icon-red-color;
   }
 
   &.underline {
@@ -254,8 +254,10 @@
 }
 
 //HTML
-.punctuation.definition.tag.html {
-  color: @pink-color;
+.html {
+  .punctuation.definition.tag {
+    color: @icon-red-color;
+  }
 }
 
 //JavaScript
@@ -272,34 +274,68 @@
       color: @orange-color;
     }
   }
-}
-.variable {
-  color: @pink-color;
+  .property-name {
+    color: @blue-color;
+  }
+  .important {
+    color: @red-color;
+  }
+  .variable {
+    color: @icon-red-color;
+
+    &.parameter, &.argument {
+      color: @icon-orange-color;
+    }
+  }
+  .support.constant {
+    color: @icon-orange-color;
+  }
+  .attribute-selector, .attribute-selector > * {
+    color: @icon-orange-color !important;
+  }
 }
 
 // Sass and scss
-.variable.sass, .variable.scss {
-  color: @pink-color;
+.sass {
+  .variable {
+    color: @icon-red-color;
+
+    &.parameter, &.argument {
+      color: @icon-orange-color;
+    }
+  }
+  .variable-declaration .entity {
+    color: @icon-red-color;
+  }
+  .support.constant {
+    color: @icon-orange-color;
+  }
 }
 
-.sass > .entity.css, .entity.sass {
-  color: @pink-color;
+.scss {
+  .variable {
+    color: @icon-red-color;
+  }
 }
 
 // Less
-.variable.less {
-  color: @pink-color;
+.less {
+  .variable {
+    color: @icon-red-color;
+  }
 }
 
 // Jade syntax
-.class.jade {
-  color: @purple-color;
+.jade {
+  .class {
+    color: @purple-color;
+  }
 }
 
 // Makefile
 .makefile {
   .variable {
-    color: @pink-color;
+    color: @icon-red-color;
   }
 
   .target {
