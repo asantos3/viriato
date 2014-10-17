@@ -1,3 +1,3 @@
 # Viriato Theme
 
-A variant of the Monokai syntax theme.
+A variant of the monokai syntax theme.
