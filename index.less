@@ -32,6 +32,7 @@
 
   .cursor-line {
     background-color: @syntax-gutter-background-color-selected;
+    //z-index: -3;
   }
 
   .line-number.cursor-line-no-selection {
@@ -349,4 +350,11 @@
       color: @blue-color;
     }
   }
+}
+
+// Support for other packages
+.bracket-matcher {
+  border-bottom: 1px solid @syntax-cursor-color;
+  margin-top: 0px;
+  border-radius:2px;
 }
