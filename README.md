@@ -1,6 +1,8 @@
 # Viriato Theme
 
-A variant of the monokai syntax theme that incoporates changes of danielgtaylor/atom-monokai-extended.
+A variant of the monokai syntax theme that incorporates changes made on the [monokai-extended](https://atom.io/themes/monokai-extended).
+
+Features were added, and issues fixed, that make this a more complete theme than those two. The colors are based on the KDE Human Interface Guidelines.
 
 #### Examples
 
