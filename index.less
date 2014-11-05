@@ -84,7 +84,7 @@
       color: @blue-color;
     }
 
-    .code .support {
+    .code .support.gfm {
       color: @gray-color;
     }
 
@@ -299,7 +299,10 @@
   .support.constant {
     color: @icon-orange-color;
   }
-  .attribute-selector, .attribute-selector > *, .css .attribute-selector, .css .attribute-selector > *, .attribute-selector .attribute {
+  .attribute-selector, .attribute-selector > *,
+  .css .attribute-selector,
+  .css .attribute-selector > *,
+  .attribute-selector .attribute {
     color: @icon-orange-color;
   }
   .string.quoted.attribute-value {
@@ -377,7 +380,6 @@
 }
 
 // PHP
-
 .php {
   .variable.other, .variable.other .punctuation.definition.variable {
     color: @orange-color;
