@@ -99,7 +99,7 @@
   }
 }
 
-.comment {
+.comment, .comment .line {
   color: @gray-color;
 }
 
@@ -259,11 +259,19 @@
   .punctuation.definition.tag {
     color: @icon-red-color;
   }
+  .sgml .punctuation.definition.tag {
+    color: @syntax-text-color;
+  }
 }
 
 //JavaScript
-.variable.js {
+.js .variable {
     color: @blue-color;
+}
+
+//CoffeeScript
+.coffee .variable.assignment {
+    color: @icon-red-color;
 }
 
 // CSS
@@ -291,8 +299,11 @@
   .support.constant {
     color: @icon-orange-color;
   }
-  .attribute-selector, .attribute-selector > * {
-    color: @icon-orange-color !important;
+  .attribute-selector, .attribute-selector > *, .css .attribute-selector, .css .attribute-selector > *, .attribute-selector .attribute {
+    color: @icon-orange-color;
+  }
+  .string.quoted.attribute-value {
+    color: @yellow-color;
   }
 }
 
@@ -348,6 +359,32 @@
   .prerequisites {
     .variable {
       color: @blue-color;
+    }
+  }
+}
+
+// Ruby
+.ruby {
+  .entity.name.class, .entity.other.inherited-class {
+    text-decoration: none;
+  }
+  .variable.language.self {
+    color: @orange-color;
+  }
+  .variable.other.block {
+    color: @orange-color;
+  }
+}
+
+// PHP
+
+.php {
+  .variable.other, .variable.other .punctuation.definition.variable {
+    color: @orange-color;
+  }
+  .punctuation.section.embedded {
+    &.begin, &.end {
+      color: @icon-orange-color;
     }
   }
 }
