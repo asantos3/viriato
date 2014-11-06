@@ -10,7 +10,9 @@ A monokai fork with it's own life.
 Several other screenshots of different languages (GithHub Flavored Markdown, HTML, CSS, Less, SASS/SCSS, JavaScript, CoffeeScript, Python, Ruby) are available on the a wiki page [here](https://github.com/asantos3/viriato/wiki/Screenshots).
 
 ## Contributing and Issues
-Feel free to contribute and discuss anything! If you add a new feature or issue, if possible, please include a code snippet or/and a screenshot.
+Feel free to contribute and discuss anything!
+
+If you add a new feature or issue, if possible, please include a code snippet or/and a screenshot.
 
 ## Notes
 
