@@ -7,7 +7,7 @@ A monokai fork with it's own life.
 ![css_example](https://cloud.githubusercontent.com/assets/1958425/4928750/591a6656-6548-11e4-90d8-c8c88ab05b23.png)
 
 ## More Screenshot Examples
-Several other screenshots of different languages (GithHub Flavored Markdown, HTML, CSS, Less, SASS/SCSS, JavaScript, CoffeeScript, Python, Ruby) are available on the a wiki page [here](https://github.com/asantos3/viriato/wiki/Screenshots).
+Several other screenshots of different languages are available on the a wiki page [here](https://github.com/asantos3/viriato/wiki/Screenshots).
 
 ## Contributing and Issues
 Feel free to contribute and discuss anything!
