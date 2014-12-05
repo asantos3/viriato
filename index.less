@@ -26,12 +26,17 @@
     color: @syntax-text-color;
 
     .cursor-line {
-      background-color: @syntax-gutter-background-color-selected;
+      background-color: @syntax-selection-color;
+    }
+
+    .cursor-line .cursor-line-no-selection {
+      background-color: @syntax-gutter-background-color;
     }
   }
 
   .cursor-line {
-    background-color: @syntax-gutter-background-color-selected;
+    background-color: @syntax-selection-color;
+    color: @blue-color;
     //z-index: -3;
   }
 
