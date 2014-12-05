@@ -27,6 +27,7 @@
 
     .cursor-line {
       background-color: @syntax-selection-color;
+      color: @blue-color;
     }
 
     .cursor-line .cursor-line-no-selection {
@@ -36,7 +37,6 @@
 
   .cursor-line {
     background-color: @syntax-selection-color;
-    color: @blue-color;
     //z-index: -3;
   }
 
@@ -350,6 +350,9 @@
   .class {
     color: @purple-color;
   }
+  .id {
+    color: @orange-color;
+  }
 }
 
 // Makefile
@@ -392,6 +395,18 @@
   .punctuation.section.embedded {
     &.begin, &.end {
       color: @icon-orange-color;
+    }
+  }
+}
+
+//Haml
+.haml {
+  .entity.name.tag {
+    &.class {
+      text-decoration: none;
+    }
+    &.id {
+      color: @orange-color;
     }
   }
 }
