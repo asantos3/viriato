@@ -382,8 +382,23 @@
   .variable.language.self {
     color: @orange-color;
   }
-  .variable.other.block {
+  .variable.other {
     color: @orange-color;
+    .definition.variable {
+      color: @orange-color;
+    }
+    &.constant {
+      color: @purple-color;
+    }
+    &.global, &.global .definition.variable {
+      color: @icon-orange-color;
+    }
+    &.instance, &.instance .definition.variable {
+      color: @sunbeam-yellow-color;
+    }
+    &.class, &.class .definition.variable {
+      color: @turquoise-color;
+    }
   }
 }
 
