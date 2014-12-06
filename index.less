@@ -37,7 +37,7 @@
 
   .cursor-line {
     background-color: @syntax-selection-color;
-    //z-index: -3;
+    z-index: -3;
   }
 
   .line-number.cursor-line-no-selection {
@@ -397,6 +397,9 @@
       color: @icon-orange-color;
     }
   }
+  .meta .function-call {
+    color: @green-color;
+  }
 }
 
 //Haml
@@ -415,5 +418,4 @@
 .bracket-matcher .region {
   border-bottom: 1px solid @syntax-cursor-color;
   margin-top: 0px;
-  border-radius:2px;
 }
