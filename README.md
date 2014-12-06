@@ -1,6 +1,6 @@
 # Viriato Syntax Theme
 
-A monokai fork with it's own life.
+A monokai fork with its own life.
 
 (See below for more screenshots)
 
