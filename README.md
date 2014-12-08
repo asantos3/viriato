@@ -2,12 +2,10 @@
 
 A syntax theme for the atom text editor that was initially forked from [monokai](https://atom.io/themes/monokai).
 
-(See below for more screenshots)
-
 ![css_example](https://cloud.githubusercontent.com/assets/1958425/5343568/1fa2229e-7eff-11e4-866f-2ca2f104ae59.png)
 
 ## More Screenshot Examples
-Several other screenshots of different languages are available on the a wiki page [here](https://github.com/asantos3/viriato/wiki/Screenshots).
+Several other screenshots of different languages are available on the wiki page [here](https://github.com/asantos3/viriato/wiki/Screenshots).
 
 ## Contributing and Issues
 Feel free to contribute and discuss anything!
