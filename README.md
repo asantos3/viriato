@@ -14,5 +14,5 @@ If you add a new feature or issue, if possible, please include a code snippet or
 
 ## Notes
 
-* This is a a fork of the [monokai syntax theme](https://atom.io/themes/monokai) and was initially based on [monokai-extended](https://atom.io/themes/monokai-extended).
+* This is a fork of the [monokai syntax theme](https://atom.io/themes/monokai) and was initially based on [monokai-extended](https://atom.io/themes/monokai-extended).
 * The colors are based on the [KDE Human Interface Guidelines](https://techbase.kde.org/Projects/Usability/HIG/Color).
