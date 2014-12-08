@@ -1,7 +1,7 @@
 {
   "name": "viriato",
   "theme": "syntax",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "private": false,
   "description": "A monokai variant with its own life.",
   "repository": "https://github.com/asantos3/viriato",
