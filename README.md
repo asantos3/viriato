@@ -4,7 +4,7 @@ A monokai fork with its own life.
 
 (See below for more screenshots)
 
-![css_example](https://cloud.githubusercontent.com/assets/1958425/4928750/591a6656-6548-11e4-90d8-c8c88ab05b23.png)
+![css_example](https://cloud.githubusercontent.com/assets/1958425/5343568/1fa2229e-7eff-11e4-866f-2ca2f104ae59.png)
 
 ## More Screenshot Examples
 Several other screenshots of different languages are available on the a wiki page [here](https://github.com/asantos3/viriato/wiki/Screenshots).
