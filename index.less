@@ -180,6 +180,10 @@
   color: @blue-color;
 }
 
+.variable {
+  color: @blue-color;
+}
+
 .variable.parameter {
   font-style: italic;
   color: @orange-color;
@@ -270,8 +274,13 @@
 }
 
 //JavaScript
-.js .variable {
+.js {
+  .variable {
     color: @blue-color;
+  }
+  .support.constant {
+    color: @icon-orange-color;
+  }
 }
 
 //CoffeeScript
