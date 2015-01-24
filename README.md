@@ -8,9 +8,7 @@ A syntax theme for the atom text editor that was initially forked from [monokai]
 Several other screenshots of different languages are available on the wiki page [here](https://github.com/asantos3/viriato/wiki/Screenshots).
 
 ## Contributing and Issues
-Feel free to contribute and discuss anything!
-
-If you add a new feature or issue, if possible, please include a code snippet or/and a screenshot.
+Feel free to contribute and discuss anything. If you add a new feature or issue, if possible, please include a code snippet or a screenshot.
 
 ## Notes
 
