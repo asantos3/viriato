@@ -193,7 +193,7 @@ atom-text-editor, :host {
 }
 
 .support.function {
-  color: @blue-color;
+  color: @green-color;
 }
 
 .support.constant {
@@ -337,6 +337,10 @@ atom-text-editor, :host {
 .scss {
   .variable .variable {
     color: @icon-red-color;
+
+    & + .punctuation {
+      color:#FFFFFF;
+    }
   }
 }
 
@@ -401,6 +405,9 @@ atom-text-editor, :host {
     &.class, &.class .definition.variable {
       color: @turquoise-color;
     }
+  }
+  .punctuation.separator {
+    color: @orange-color;
   }
 }
 
