@@ -115,7 +115,7 @@ atom-text-editor, :host {
   }
 
   .variable {
-    color: #FFFFFF;
+    color: @syntax-text-color;
   }
 }
 
@@ -123,8 +123,7 @@ atom-text-editor, :host {
   color: @purple-color;
 }
 
-.constant.language,
-.meta.preprocessor {
+.constant.language {
   color: @purple-color;
 }
 
@@ -176,7 +175,7 @@ atom-text-editor, :host {
 }
 
 .variable {
-  color: @blue-color;
+  color: @orange-color;
 }
 
 .variable.parameter {
@@ -200,13 +199,13 @@ atom-text-editor, :host {
   color: @blue-color;
 }
 
-.support.type,
-.support.class {
+.support.type {
   font-style: italic;
   color: @blue-color;
 }
 
-.support.other.variable {
+.support.class {
+  color: @purple-color;
 }
 
 .invalid {
@@ -220,7 +219,7 @@ atom-text-editor, :host {
 }
 
 .punctuation.definition.variable {
-  color: #FFFFFF;
+  color: @syntax-text-color;
 }
 
 // General markup
@@ -270,11 +269,14 @@ atom-text-editor, :host {
 
 //JavaScript
 .js {
-  .variable {
-    color: @blue-color;
-  }
   .support.constant {
     color: @icon-orange-color;
+  }
+  .variable.parameter {
+    color: @orange-color;
+  }
+  .type.object {
+    color: @blue-color;
   }
 }
 
@@ -339,7 +341,7 @@ atom-text-editor, :host {
     color: @icon-red-color;
 
     & + .punctuation {
-      color:#FFFFFF;
+      color: @syntax-text-color;
     }
   }
 }
@@ -406,9 +408,6 @@ atom-text-editor, :host {
       color: @turquoise-color;
     }
   }
-  .punctuation.separator {
-    color: @orange-color;
-  }
 }
 
 // PHP
@@ -426,7 +425,7 @@ atom-text-editor, :host {
   }
 }
 
-//Haml
+// Haml
 .haml {
   .entity.name.tag {
     &.class {
@@ -434,6 +433,25 @@ atom-text-editor, :host {
     }
     &.id {
       color: @orange-color;
+    }
+  }
+}
+
+// Go
+.go {
+  .keyword.operator {
+    color: @syntax-text-color;
+  }
+}
+
+// Java
+.java {
+  .storage.modifier {
+    &.package {
+      color: @syntax-text-color;
+    }
+    &.import {
+      color: @syntax-text-color;
     }
   }
 }
