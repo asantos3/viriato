@@ -20,13 +20,13 @@
 @syntax-background-color: #222222;
 
 // Guide colors
-@syntax-wrap-guide-color: rgba(255, 255, 255, .1);
-@syntax-indent-guide-color: rgba(255, 255, 255, .15);
-@syntax-invisible-character-color: rgba(197, 200, 198, .2);
+@syntax-wrap-guide-color: rgb(80, 80, 80);
+@syntax-indent-guide-color: @syntax-wrap-guide-color;
+@syntax-invisible-character-color: @syntax-wrap-guide-color;
 
 // For find and replace markers
-@syntax-result-marker-color: darken(@blue-color, 25%);
-@syntax-result-marker-color-selected: lighten(@gray-color, 50%);
+@syntax-result-marker-color: @blue-color;
+@syntax-result-marker-color-selected: @gray-color;
 
 // Gutter colors
 @syntax-gutter-text-color: @syntax-text-color;
@@ -39,3 +39,55 @@
 @syntax-color-added: #529b2f;
 @syntax-color-modified: #E6DB74;
 @syntax-color-removed: #F92672;
+
+.syntax-background() when (lightness(@base-background-color) < 50%) {
+  background-color: darken(@base-background-color, 2%);
+}
+
+.syntax-background() when (lightness(@base-background-color) >= 50%) {
+  background-color: lighten(@base-background-color, 2%);
+}
+
+.syntax-text-color() when (lightness(@base-background-color) < 50%) {
+  color: lighten(@text-color, 50%);
+}
+
+.syntax-text-color() when (lightness(@base-background-color) >= 50%) {
+  color: lighten(@text-color, 7.5%);
+}
+
+.syntax-guide-color(@color) when (lightness(@base-background-color) < 50%) {
+  color: @color;
+}
+
+.syntax-guide-color(@color) when (lightness(@base-background-color) >= 50%) {
+  color: lighten(@color, 10%);
+}
+
+.syntax-gutter-text-color(){
+  .syntax-text-color();
+}
+
+.syntax-gutter-background-color(){
+  .syntax-background();
+}
+
+.syntax-selection-color() when (lightness(@base-background-color) < 50%) {
+  background-color: lighten(@base-background-color, 5%);
+}
+
+.syntax-selection-color() when (lightness(@base-background-color) >= 50%) {
+  background-color: darken(@base-background-color, 5%);
+}
+
+.syntax-highlight-current() when (lightness(@base-background-color) < 50%) {
+  border: 1px solid lighten(@syntax-result-marker-color-selected, 50%);
+}
+
+.syntax-highlight-current() when (lightness(@base-background-color) >= 50%) {
+  border: 1px solid darken(@syntax-result-marker-color-selected, 50%);
+}
+
+.syntax-primary-color(@color) when (lightness(@base-background-color) >= 50%){
+  color: darken(@color, 5%);
+}

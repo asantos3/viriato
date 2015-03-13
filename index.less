@@ -1,63 +1,77 @@
+@import 'ui-variables';
 @import 'syntax-variables';
 
 atom-text-editor, :host {
-  background-color: @syntax-background-color;
-  color: @syntax-text-color;
+
+  .syntax-background();
+  .syntax-text-color();
 
   .invisible-character {
-    color: @syntax-invisible-character-color;
+    .syntax-guide-color(@syntax-invisible-character-color);
   }
 
   .indent-guide {
-    color: @syntax-indent-guide-color;
+    .syntax-guide-color(@syntax-indent-guide-color);
   }
 
   .wrap-guide {
-    background-color: @syntax-wrap-guide-color;
+    .syntax-guide-color(@syntax-wrap-guide-color);
   }
 
   .gutter {
-    background-color: @syntax-gutter-background-color;
-    color: @syntax-text-color;
+    .syntax-gutter-background-color();
+    .syntax-gutter-text-color();
 
     .cursor-line {
-      background-color: @syntax-selection-color;
+      .syntax-selection-color();
       color: @blue-color;
     }
 
     .cursor-line .cursor-line-no-selection {
-      background-color: @syntax-gutter-background-color;
+      .syntax-gutter-background-color();
     }
   }
 
   .cursor-line {
-    background-color: @syntax-selection-color;
+    .syntax-selection-color();
     z-index: -3;
   }
 
   .line-number.cursor-line-no-selection {
-    background-color: @syntax-gutter-background-color-selected;
+    .syntax-gutter-background-color();
   }
 
   .invisible {
-    color: @syntax-text-color;
+    .syntax-text-color();
   }
 
   .cursor {
     border-color: @syntax-cursor-color;
   }
 
-  .selection .region {
-    background-color: @syntax-selection-color;
-  }
+  //search results, text selection and bracket matcher
+  .highlights {
+    .highlight {
+      .region {
+        border: 1px solid @syntax-result-marker-color;
+      }
 
-  .search-results .marker .region {
-    background-color: transparent;
-    border: 1px solid @syntax-result-marker-color;
-  }
+      &.current-result .region {
+        .syntax-highlight-current();
+      }
 
-  .search-results .marker.current-result .region {
-    border: 1px solid @syntax-result-marker-color-selected;
+      //text selection
+      &.selection .region {
+        border: 0;
+        .syntax-selection-color();
+      }
+
+      &.bracket-matcher .region {
+        border: 0;
+        border-bottom: 1px solid @syntax-cursor-color;
+        margin-top: 0px;
+      }
+    }
   }
 
   .gfm {
@@ -115,7 +129,7 @@ atom-text-editor, :host {
   }
 
   .variable {
-    color: @syntax-text-color;
+    .syntax-text-color();
   }
 }
 
@@ -219,7 +233,7 @@ atom-text-editor, :host {
 }
 
 .punctuation.definition.variable {
-  color: @syntax-text-color;
+  .syntax-text-color();
 }
 
 // General markup
@@ -341,7 +355,7 @@ atom-text-editor, :host {
     color: @icon-red-color;
 
     & + .punctuation {
-      color: @syntax-text-color;
+      .syntax-text-color();
     }
   }
 }
@@ -440,7 +454,7 @@ atom-text-editor, :host {
 // Go
 .go {
   .keyword.operator {
-    color: @syntax-text-color;
+    .syntax-text-color();
   }
 }
 
@@ -448,16 +462,10 @@ atom-text-editor, :host {
 .java {
   .storage.modifier {
     &.package {
-      color: @syntax-text-color;
+      .syntax-text-color();
     }
     &.import {
-      color: @syntax-text-color;
+      .syntax-text-color();
     }
   }
-}
-
-// Support for other packages
-.bracket-matcher .region {
-  border-bottom: 1px solid @syntax-cursor-color;
-  margin-top: 0px;
 }
