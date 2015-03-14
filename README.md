@@ -1,6 +1,6 @@
 # Viriato Syntax Theme
 
-A syntax theme for the atom text editor that was initially forked from [monokai](https://atom.io/themes/monokai).
+A vivid syntax theme for Atom that works with light and dark themes.
 
 ![css_example](https://cloud.githubusercontent.com/assets/1958425/5343568/1fa2229e-7eff-11e4-866f-2ca2f104ae59.png)
 
@@ -12,5 +12,5 @@ Feel free to contribute and discuss anything. If you add a new feature or issue,
 
 ## Notes
 
-* This is a fork of the [monokai syntax theme](https://atom.io/themes/monokai) and was initially based on [monokai-extended](https://atom.io/themes/monokai-extended).
+* This is a fork of the [monokai syntax theme](https://atom.io/themes/monokai) and was based on [monokai-extended](https://atom.io/themes/monokai-extended) and [atom-monokai](https://atom.io/packages/atom-monokai).
 * The colors are based on the [KDE Human Interface Guidelines](https://techbase.kde.org/Projects/Usability/HIG/Color).
