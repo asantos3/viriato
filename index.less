@@ -6,16 +6,8 @@ atom-text-editor, :host {
   .syntax-background();
   .syntax-text-color();
 
-  .invisible-character {
-    .syntax-guide-color(@syntax-invisible-character-color);
-  }
-
-  .indent-guide {
-    .syntax-guide-color(@syntax-indent-guide-color);
-  }
-
-  .wrap-guide {
-    .syntax-guide-color(@syntax-wrap-guide-color);
+  .invisible-character, .indent-guide, .wrap-guide {
+    .syntax-guide-color();
   }
 
   .gutter {
@@ -30,29 +22,32 @@ atom-text-editor, :host {
     .cursor-line .cursor-line-no-selection {
       .syntax-gutter-background-color();
     }
+
+    .line-number.cursor-line-no-selection {
+      .syntax-gutter-background-color();
+    }
   }
 
-  .cursor-line {
-    .syntax-selection-color();
-    z-index: -3;
-  }
+  .scroll-view {
+    .cursor {
+      border-color: @syntax-cursor-color;
+    }
 
-  .line-number.cursor-line-no-selection {
-    .syntax-gutter-background-color();
-  }
+    .cursor-line {
+      .syntax-selection-color();
+      z-index: -3;
+    }
 
-  .invisible {
-    .syntax-text-color();
-  }
-
-  .cursor {
-    border-color: @syntax-cursor-color;
+    // invisible characters CHARACTES
+    .invisible {
+      .syntax-text-color();
+    }
   }
 
   //search results, text selection and bracket matcher
   .highlights {
     .highlight {
-      .region {
+      &.find-result .region {
         border: 1px solid @syntax-result-marker-color;
       }
 
@@ -271,7 +266,7 @@ atom-text-editor, :host {
   }
 }
 
-//HTML
+// HTML
 .html {
   .punctuation.definition.tag {
     color: @icon-red-color;
@@ -281,7 +276,7 @@ atom-text-editor, :host {
   }
 }
 
-//JavaScript
+// JavaScript
 .js {
   .support.constant {
     color: @icon-orange-color;
@@ -294,7 +289,7 @@ atom-text-editor, :host {
   }
 }
 
-//CoffeeScript
+// CoffeeScript
 .coffee .variable.assignment {
     color: @icon-red-color;
 }
@@ -333,7 +328,7 @@ atom-text-editor, :host {
   }
 }
 
-// Sass and scss
+// Sass
 .sass {
   .variable {
     color: @icon-red-color;
@@ -350,6 +345,7 @@ atom-text-editor, :host {
   }
 }
 
+// scss
 .scss {
   .variable .variable {
     color: @icon-red-color;

@@ -3,7 +3,7 @@
   "theme": "syntax",
   "version": "0.7.0",
   "private": false,
-  "description": "A monokai variant with its own life.",
+  "description": "Vivid syntax theme - supports light and dark themes.",
   "repository": "https://github.com/asantos3/viriato",
   "license": "MIT",
   "engines": {
