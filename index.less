@@ -6,8 +6,12 @@ atom-text-editor, :host {
   .syntax-background();
   .syntax-text-color();
 
-  .invisible-character, .indent-guide, .wrap-guide {
+  .invisible-character, .indent-guide {
     .syntax-guide-color();
+  }
+
+  .wrap-guide {
+    .syntax-guide-background();
   }
 
   .gutter {

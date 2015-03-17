@@ -62,6 +62,14 @@
   color: lighten(@syntax-guide-color, 10%);
 }
 
+.syntax-guide-background() when (lightness(@base-background-color) < 50%) {
+  background: @syntax-guide-color;
+}
+
+.syntax-guide-background() when (lightness(@base-background-color) >= 50%) {
+  background: lighten(@syntax-guide-color, 10%);
+}
+
 .syntax-gutter-text-color(){
   .syntax-text-color();
 }
