@@ -1,28 +1,27 @@
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  body:first-of-type pre::after {
-    content: 'highlight: ' attr(class);
-  }
-  body {
-    font-family: 'Noto-Sans', 'Helvitica', sans-serif;
-    height: 100px;
-  }
-}
-
-@import url('print.css');
-@page:right {
- margin: 1cm 2cm 1.3cm 4cm;
-}
+@import url('heyo.css');
 
 @font-face {
   font-family: Chunkfive; src: url('Chunkfive.otf');
 }
 
+@page:right {
+  margin: 1cm 2px 3dpi;
+}
+
 /* Comment */
-div.text,
-#content,
-li[lang=ru] {
+div.class, #id, li[lang=pt] {
   font: Tahoma, Chunkfive, sans-serif;
   background: url('hatch.png');
   color: #F0F0F0 !important;
   width: 100%;
+}
+
+@media screen and (min-resolution: 2dppx) {
+  body:first-of-type pre:after {
+    content: 'highlight: ' attr(class);
+  }
+  body {
+    font-family: 'Noto-Sans', 'Helvetica', sans-serif;
+    height: 100px;
+  }
 }
