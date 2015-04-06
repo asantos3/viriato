@@ -72,44 +72,6 @@ atom-text-editor, :host {
       }
     }
   }
-
-  .gfm {
-
-    .bold {
-      font-weight: bold;
-    }
-
-    .italic {
-      font-style: italic;
-    }
-
-    .raw {
-      color: @red-color;
-    }
-
-    .variable.list {
-      color: @icon-red-color;
-      font-weight: bold;
-    }
-
-    .link .entity {
-      text-decoration: underline;
-      color: @blue-color;
-    }
-
-    .code .support.gfm {
-      color: @gray-color;
-    }
-
-    .support.quote, .comment.quote {
-      color: @blue-color;
-    }
-
-    .strike {
-      color: @icon-red-color;
-    }
-
-  }
 }
 
 .comment, .comment .line {
@@ -132,45 +94,67 @@ atom-text-editor, :host {
   }
 }
 
-.constant.numeric {
-  color: @purple-color;
-}
+.constant {
+  &.numeric {
+    color: @purple-color;
+  }
 
-.constant.language {
-  color: @purple-color;
-}
+  &.language {
+    color: @purple-color;
+  }
 
-.constant.character,
-.constant.other {
-  color: @purple-color;
+  &.character,
+  &.other {
+    color: @purple-color;
+  }
 }
 
 .keyword {
   color: @icon-red-color;
+
+  &.operator.bracket, &.operator.punctuation, {
+    .syntax-text-color();
+  }
 }
 
 .storage {
   color: @icon-red-color;
-}
 
-.storage.type {
-  font-style: italic;
-  color: @blue-color;
+  &.type {
+    font-style: italic;
+    color: @blue-color;
+  }
 }
 
 .entity {
   color: @green-color;
-}
 
-.entity.name.class {
-  text-decoration: none;
-  color: @green-color;
-}
+  &.name {
+    &.class {
+      text-decoration: none;
+      color: @green-color;
+    }
 
-.entity.other.inherited-class {
-  font-style: italic;
-  text-decoration: none;
-  color: @green-color;
+    &.function {
+      color: @green-color;
+    }
+
+    &.instance {
+      color: @blue-color;
+    }
+    &.tag {
+      color: @icon-red-color;
+    }
+  }
+
+  &.other.attribute-name {
+    color: @green-color;
+  }
+  &.other.inherited-class {
+    font-style: italic;
+    text-decoration: none;
+    color: @green-color;
+  }
 }
 
 // Prevent underlines from making their way into whitespace elements
@@ -179,56 +163,41 @@ atom-text-editor, :host {
   display: inline-block;
 }
 
-.entity.name.function {
-  color: @green-color;
-}
-
-.entity.name.instance {
-  color: @blue-color;
-}
-
 .variable {
   color: @orange-color;
+
+  &.parameter {
+    font-style: italic;
+    color: @orange-color;
+  }
 }
 
-.variable.parameter {
-  font-style: italic;
-  color: @orange-color;
-}
+.support {
+  &.function {
+    color: @green-color;
+  }
 
-.entity.name.tag {
-  color: @icon-red-color;
-}
+  &.constant {
+    color: @blue-color;
+  }
 
-.entity.other.attribute-name {
-  color: @green-color;
-}
-
-.support.function {
-  color: @green-color;
-}
-
-.support.constant {
-  color: @blue-color;
-}
-
-.support.type {
-  font-style: italic;
-  color: @blue-color;
-}
-
-.support.class {
-  color: @purple-color;
+  &.type {
+    font-style: italic;
+    color: @blue-color;
+  }
+  &.class {
+    color: @purple-color;
+  }
 }
 
 .invalid {
   color: #F8F8F0;
   background-color: @icon-red-color;
-}
 
-.invalid.deprecated {
-  color: #F8F8F0;
-  background-color: @purple-color;
+  &.deprecated {
+    color: #F8F8F0;
+    background-color: @purple-color;
+  }
 }
 
 .punctuation.definition.variable {
@@ -267,6 +236,43 @@ atom-text-editor, :host {
   &.quote {
     font-style: italic;
     color: @blue-color;
+  }
+}
+
+// GitHub Flavored Markdown
+.gfm {
+  .bold {
+    font-weight: bold;
+  }
+
+  .italic {
+    font-style: italic;
+  }
+
+  .raw {
+    color: @red-color;
+  }
+
+  .variable.list {
+    color: @icon-red-color;
+    font-weight: bold;
+  }
+
+  .link .entity {
+    text-decoration: underline;
+    color: @blue-color;
+  }
+
+  .code .support.gfm {
+    color: @gray-color;
+  }
+
+  .support.quote, .comment.quote {
+    color: @blue-color;
+  }
+
+  .strike {
+    color: @icon-red-color;
   }
 }
 
@@ -349,7 +355,7 @@ atom-text-editor, :host {
   }
 }
 
-// scss
+// SCSS
 .scss {
   .variable .variable {
     color: @icon-red-color;
@@ -367,7 +373,7 @@ atom-text-editor, :host {
   }
 }
 
-// Jade syntax
+// Jade
 .jade {
   .class {
     color: @purple-color;
@@ -448,13 +454,6 @@ atom-text-editor, :host {
     &.id {
       color: @orange-color;
     }
-  }
-}
-
-// Go
-.go {
-  .keyword.operator {
-    .syntax-text-color();
   }
 }
 
