@@ -1,6 +1,19 @@
 @import 'ui-variables';
 @import 'syntax-variables';
 
+// Temporary fix for One Light UI Theme
+.theme-one-light-ui {
+  .tab-bar .tab {
+    &[data-type="TextEditor"]::after {
+      background-color: #ebebeb;
+      border-bottom-color: #ebebeb;
+    }
+    &.active[data-type="TextEditor"] {
+      color: #3d475c;
+    }
+  }
+}
+
 atom-text-editor, :host {
 
   .syntax-background();
@@ -466,16 +479,5 @@ atom-text-editor, :host {
     &.import {
       .syntax-text-color();
     }
-  }
-}
-
-//Fix for the active tab color for the Atom One Light theme
-.theme-one-light-ui {
-  .tab-bar .tab.active, .tab-bar .tab.active[data-type="TextEditor"] {
-    background-color: #e0e0e0;
-    color: #5c3d3d;
-  }
-  .tab-bar .tab.active[data-type="TextEditor"]:after {
-    border-bottom: 1px solid #e0e0e0;
   }
 }

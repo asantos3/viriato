@@ -23,21 +23,26 @@
 @syntax-result-marker-color: @blue-color;
 @syntax-result-marker-color-selected: @gray-color;
 
+// Gutter colors
+//@syntax-gutter-text-color: @syntax-text-color;
+//@syntax-gutter-text-color-selected: @syntax-gutter-text-color;
+//@syntax-gutter-background-color: @syntax-background-color;
+//@syntax-gutter-background-color-selected: @syntax-gutter-background-color;
+
 // For git diff info. i.e. in the gutter
 @syntax-color-renamed: #ffd569;
 @syntax-color-added: #529b2f;
 @syntax-color-modified: #E6DB74;
 @syntax-color-removed: #F92672;
 
-@syntax-background-color: hsl(220,0.1%,20%);
-
 .syntax-background() when (lightness(@base-background-color) < 50%) {
-  background-color: darken(@base-background-color, 4%);
+  @www-background: darken(@base-background-color, 5%);
 }
-
 .syntax-background() when (lightness(@base-background-color) >= 50%) {
-  background-color: lighten(@base-background-color, 2%);
+  @www-background: lighten(@base-background-color, 2%);
 }
+.syntax-background();
+@syntax-background: @www-background;
 
 .syntax-text-color() when (lightness(@base-background-color) < 50%) {
   color: lighten(@text-color, 50%);
