@@ -15,7 +15,6 @@
 }
 
 atom-text-editor, :host {
-
   .syntax-background();
   .syntax-text-color();
 
@@ -43,6 +42,16 @@ atom-text-editor, :host {
     .line-number.cursor-line-no-selection {
       .syntax-gutter-background-color();
     }
+
+    // folded lines
+    .line-number.folded, .line-number:after {
+      color: @syntax-cursor-color;
+    }
+  }
+
+  // fold marker in folded lines
+  .fold-marker:after {
+    color: @syntax-cursor-color;
   }
 
   .scroll-view {
@@ -55,13 +64,13 @@ atom-text-editor, :host {
       z-index: -3;
     }
 
-    // invisible characters CHARACTES
+    // invisible characters
     .invisible {
       .syntax-text-color();
     }
   }
 
-  //search results, text selection and bracket matcher
+  // search results, text selection and bracket matcher
   .highlights {
     .highlight {
       &.find-result .region {
