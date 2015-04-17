@@ -1,4 +1,4 @@
-//Primary
+// Primary
 @icon-red-color: #da4453;
 @red-color: #e12a2a;
 @icon-orange-color: #f47750;
@@ -14,9 +14,10 @@
 @gray-color: #75715E;
 
 // General colors
+@syntax-background-color: hsl(220,0.1%,20%);
 @syntax-cursor-color: #0098ff;
 
-// Guide colors
+// Guide color
 @syntax-guide-color: rgb(80, 80, 80);
 
 // For find and replace markers
@@ -28,8 +29,6 @@
 @syntax-color-added: #529b2f;
 @syntax-color-modified: #E6DB74;
 @syntax-color-removed: #F92672;
-
-@syntax-background-color: hsl(220,0.1%,20%);
 
 .syntax-background() when (lightness(@base-background-color) < 50%) {
   background-color: darken(@base-background-color, 4%);
