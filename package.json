@@ -1,7 +1,7 @@
 {
   "name": "viriato",
   "theme": "syntax",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "private": false,
   "description": "Vivid syntax theme - supports light and dark themes.",
   "repository": "https://github.com/asantos3/viriato",
