@@ -97,7 +97,7 @@ atom-text-editor, :host {
 }
 
 .comment, .comment .line {
-  color: @gray-color;
+  color: @grey-color;
 }
 
 .string {
@@ -132,7 +132,7 @@ atom-text-editor, :host {
 }
 
 .keyword {
-  color: @icon-red-color;
+  color: @pink-color;
 
   &.operator.bracket, &.operator.punctuation, {
     .syntax-text-color();
@@ -140,7 +140,7 @@ atom-text-editor, :host {
 }
 
 .storage {
-  color: @icon-red-color;
+  color: @pink-color;
 
   &.type {
     font-style: italic;
@@ -165,7 +165,7 @@ atom-text-editor, :host {
       color: @blue-color;
     }
     &.tag {
-      color: @icon-red-color;
+      color: @pink-color;
     }
   }
 
@@ -214,7 +214,7 @@ atom-text-editor, :host {
 
 .invalid {
   color: #F8F8F0;
-  background-color: @icon-red-color;
+  background-color: @pink-color;
 
   &.deprecated {
     color: #F8F8F0;
@@ -242,12 +242,12 @@ atom-text-editor, :host {
 
   &.italic {
     font-style: italic;
-    color: @icon-red-color;
+    color: @pink-color;
   }
 
   &.bold {
     font-weight: bold;
-    color: @icon-red-color;
+    color: @pink-color;
   }
 
   &.underline {
@@ -276,7 +276,7 @@ atom-text-editor, :host {
   }
 
   .variable.list {
-    color: @icon-red-color;
+    color: @pink-color;
     font-weight: bold;
   }
 
@@ -286,7 +286,7 @@ atom-text-editor, :host {
   }
 
   .code .support.gfm {
-    color: @gray-color;
+    color: @grey-color;
   }
 
   .support.quote, .comment.quote {
@@ -294,24 +294,24 @@ atom-text-editor, :host {
   }
 
   .strike {
-    color: @icon-red-color;
+    color: @pink-color;
   }
 }
 
 // HTML
 .html {
   .punctuation.definition.tag {
-    color: @icon-red-color;
+    color: @pink-color;
   }
   .sgml, .sgml .punctuation.definition.tag {
-    color: @icon-orange-color;
+    color: @orange-light-color;
   }
 }
 
 // JavaScript
 .js {
   .support.constant {
-    color: @icon-orange-color;
+    color: @orange-light-color;
   }
   .variable.parameter {
     color: @orange-color;
@@ -323,7 +323,7 @@ atom-text-editor, :host {
 
 // CoffeeScript
 .coffee .variable.assignment {
-    color: @icon-red-color;
+    color: @pink-color;
 }
 
 // CSS
@@ -343,17 +343,17 @@ atom-text-editor, :host {
   }
   .variable {
     &.parameter, &.argument {
-      color: @icon-orange-color;
+      color: @orange-light-color;
     }
   }
   .support.constant {
-    color: @icon-orange-color;
+    color: @orange-light-color;
   }
   .attribute-selector, .attribute-selector > *,
   .css .attribute-selector,
   .css .attribute-selector > *,
   .attribute-selector .attribute {
-    color: @icon-orange-color;
+    color: @orange-light-color;
   }
   .string.quoted.attribute-value {
     color: @yellow-color;
@@ -363,24 +363,24 @@ atom-text-editor, :host {
 // Sass
 .sass {
   .variable {
-    color: @icon-red-color;
+    color: @pink-color;
 
     &.parameter, &.argument {
-      color: @icon-orange-color;
+      color: @orange-light-color;
     }
   }
   .variable-declaration .entity {
-    color: @icon-red-color;
+    color: @pink-color;
   }
   .support.constant {
-    color: @icon-orange-color;
+    color: @orange-light-color;
   }
 }
 
 // SCSS
 .scss {
   .variable .variable {
-    color: @icon-red-color;
+    color: @pink-color;
 
     & + .punctuation {
       .syntax-text-color();
@@ -391,7 +391,7 @@ atom-text-editor, :host {
 // Less
 .less {
   .variable {
-    color: @icon-red-color;
+    color: @pink-color;
   }
 }
 
@@ -408,7 +408,7 @@ atom-text-editor, :host {
 // Makefile
 .makefile {
   .variable {
-    color: @icon-red-color;
+    color: @pink-color;
   }
 
   .target {
@@ -441,10 +441,10 @@ atom-text-editor, :host {
       color: @purple-color;
     }
     &.global, &.global .definition.variable {
-      color: @icon-orange-color;
+      color: @orange-light-color;
     }
     &.instance, &.instance .definition.variable {
-      color: @sunbeam-yellow-color;
+      color: @green-color;
     }
     &.class, &.class .definition.variable {
       color: @turquoise-color;
@@ -459,7 +459,7 @@ atom-text-editor, :host {
   }
   .punctuation.section.embedded {
     &.begin, &.end {
-      color: @icon-orange-color;
+      color: @orange-light-color;
     }
   }
   .meta .function-call {
