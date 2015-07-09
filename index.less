@@ -4,48 +4,16 @@
 //Fix for One Light UI Theme
 .theme-one-light-ui {
   .tab-bar .tab {
-    &[data-type="TextEditor"]::after {
+    &::after {
       background-color: #ebebeb;
       border-bottom-color: #ebebeb;
     }
     &.active[data-type="TextEditor"] {
       color: #3d475c;
-    }
-  }
 
-  .scrollbars-visible-always atom-text-editor /deep/ ::-webkit-scrollbar-corner {
-    background: #fafafa;
-  }
-
-  .scrollbars-visible-always /deep/ ::-webkit-scrollbar-corner {
-    background: #e5e5e6;
-  }
-
-  ::-webkit-scrollbar-track {
-    border-color: #fafafa;
-    background: #d6d6d7;
-  }
-
-  .scrollbars-visible-always {
-    /deep/ ::-webkit-scrollbar-thumb {
-    	border: 3px solid #fafafa;
-    	background: #d6d6d7;
-    }
-
-    /deep/ ::-webkit-scrollbar-corner {
-      background: #fafafa;
-    }
-
-    atom-text-editor {
-      /deep/ ::-webkit-scrollbar-track {
-      	background: #fafafa;
-      }
-      /deep/ ::-webkit-scrollbar-corner {
-      	background: #fafafa;
-      }
-      /deep/ ::-webkit-scrollbar-thumb {
-      	border-color: #fafafa;
-      	background: #d6d6d7;
+      &::after {
+        background-color: lighten(@base-background-color, 5%);
+        border-bottom-color: lighten(@base-background-color, 5%);
       }
     }
   }
