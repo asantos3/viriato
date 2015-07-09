@@ -2,7 +2,7 @@
 
 A vivid syntax theme for Atom that works with light and dark themes.
 
-![css](https://cloud.githubusercontent.com/assets/1958425/6741732/02df9330-ce82-11e4-8c63-deaac250eeab.png)
+![css](https://cloud.githubusercontent.com/assets/1958425/8604596/8f32ad66-2677-11e5-9abe-3725fa2648ac.png)
 
 #### Notes
 
