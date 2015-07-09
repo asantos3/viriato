@@ -1,11 +1,11 @@
 // Primary
-@black-color: #3C3939;
-@black-darker-color: #292929;
+@black-color: #292929;
+@black-darker-color: #1C1C1C;
 
 @grey-color: #727064;
 @grey-dark-color: #4c4444;
 @grey-light-color: #97a2a3;
-@grey-lighter-color: #bdc3c7;
+@grey-lighter-color: #CCCCCC;
 
 @white-color: #fcfcfc;
 @white-dark-color: #EFF0F1;
@@ -40,7 +40,7 @@
 @purple-dark-color: #8e44ad;
 
 // General colors
-@syntax-background-color: hsl(220,0.1%,20%);
+@syntax-background-color: hsl(209,0.1%,15%);
 @syntax-cursor-color: @blue-color;
 
 // Guide color
@@ -61,7 +61,7 @@
 }
 
 .syntax-background() when (lightness(@base-background-color) >= 50%) {
-  background-color: lighten(@base-background-color, 2%);
+  background-color: lighten(@base-background-color, 5%);
 }
 
 .syntax-text-color() when (lightness(@base-background-color) < 50%) {
@@ -77,7 +77,7 @@
 }
 
 .syntax-guide-color() when (lightness(@base-background-color) >= 50%) {
-  color: lighten(@syntax-guide-color, 10%);
+  color: lighten(@syntax-guide-color, 60%);
 }
 
 .syntax-guide-background() when (lightness(@base-background-color) < 50%) {
@@ -85,7 +85,7 @@
 }
 
 .syntax-guide-background() when (lightness(@base-background-color) >= 50%) {
-  background: lighten(@syntax-guide-color, 10%);
+  background: lighten(@syntax-guide-color, 60%);
 }
 
 .syntax-gutter-text-color(){
@@ -97,11 +97,11 @@
 }
 
 .syntax-selection-color() when (lightness(@base-background-color) < 50%) {
-  background-color: lighten(@base-background-color, 2%);
+  background-color: lighten(@base-background-color, 0%);
 }
 
 .syntax-selection-color() when (lightness(@base-background-color) >= 50%) {
-  background-color: darken(@base-background-color, 5%);
+  background-color: lighten(@base-background-color, 1%);
 }
 
 .syntax-highlight-current() when (lightness(@base-background-color) < 50%) {
@@ -112,6 +112,10 @@
   border: 1px solid darken(@syntax-result-marker-color-selected, 50%);
 }
 
-.syntax-primary-color(@color) when (lightness(@base-background-color) >= 50%){
-  color: darken(@color, 5%);
+.syntax-color(@color) when (lightness(@base-background-color) >= 50%){
+  color: lighten(@color, 15%);
+}
+
+.syntax-color(@color) when (lightness(@base-background-color) < 50%){
+  color: lighten(@color, 0%);
 }
